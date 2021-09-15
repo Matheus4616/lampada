@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lampada</title>
+    <script>
+        var quebrada = false;
+        function mudalampada(tipo) {
+            if (!quebrada) {
+            document.getElementById("luz").src = "img/" + tipo + ".jpg";
+            if ( tipo == 'lampada-quebrada') {
+                quebrada = true;}
+            }
+        }
+    </script>
+</head>
+<body>
+        <h1>Acenda Lampada</h1>
+    <H2>PASSE MOUSE POR CIMA + CLICK QUEBRAR</H2>
+    
+    <div><img src="img/lampada-apagada.jpg" id="luz" onmouseenter="mudalampada('lampada-acesa')" onmouseout="mudalampada('lampada-apagada')" onclick="mudalampada('lampada-quebrada')" alt="lampadaapagada"></div>
+</body>
+</html>
